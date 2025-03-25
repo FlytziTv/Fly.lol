@@ -1,0 +1,347 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,500;1,14..32,500&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: url(/img/background.png);
+  color: white;
+  font-family: "Inter", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.all-card {
+  display: flex;
+  gap: 20px;
+}
+
+.profile-card {
+  width: 608px;
+  padding: 4px;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #010101;
+}
+.profile-banner {
+  width: 100%;
+  height: 200px;
+  border-radius: 10px 10px 0 0;
+  background: url('/img/bannière/Flytzi-Bannière.png') center/cover;
+}
+.profile-info {
+  position: relative;
+}
+.avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  position: absolute;
+  top: -60px;
+  left: 30px;
+  border: #010101 4px solid;
+}
+
+.user-infos {
+  height: 60px;
+  margin-left: 170px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.pseudo {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.pseudo h2 {
+  font-size: 24px;
+}
+
+.icons-user {
+  display: flex;
+  align-items: center;
+  background: rgba(217, 217, 217, 0.1);
+  padding: 4px;
+  gap: 4px;
+  /* border-radius: 50%; */
+  border-radius: 30px;
+}
+
+.icons-user img {
+  width: 16px;
+}
+
+.description {
+  color: #aaa;
+}
+.badges {
+  margin-left: 130px;
+}
+.badge {
+  margin-right: 5px;
+}
+.stats {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 10px 0 10px;
+  height: 100px;
+  gap: 10px;
+}
+.box {
+  background: #111;
+  padding: 10px;
+  border-radius: 14px;
+  border: rgba(54, 54, 54, 0.5) 2px solid;
+  width: 100%;
+  display: flex;
+}
+
+.box img {
+  border-radius: 10px;
+}
+
+.infos-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  padding-left: 10px;
+}
+
+.title-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 6px;
+}
+
+.title-box h3 {
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.title-box a {
+  font-size: 12px;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 1.5px 6px;
+  background-color: green;
+  border-radius: 5px;
+}
+
+.container-text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.box-text {
+  display: flex;
+  gap: 5px;
+}
+
+.box-text img {
+  width: 17px;
+  height: 17px;
+}
+
+.box-text p {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.social-icons a {
+  text-decoration: none;
+  width: 36px;
+  height: 36px;
+}
+
+.social-icons a img {
+  width: 100%;
+  height: 100%;
+}
+
+.location {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.footer {
+  display: flex;
+  gap: 10px;
+  padding: 0px 10px 6px 10px;
+}
+
+.footer-text {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.footer-text img {
+  width: 15px;
+  height: 15px;
+}
+
+.footer-text p {
+  font-size: 14px;
+  color: #ffffff;
+  font-weight: 500;
+}
+
+
+
+
+.music-card {
+  width: 308px;
+  padding: 4px;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #010101;
+}
+.music-banner {
+  width: 100%;
+  height: 200px;
+  border-radius: 10px 10px 0 0;
+  background: url('/music/So_La_Lune/Bannière.png') center/cover;
+}
+.music-info {
+  position: relative;
+}
+
+.music {
+  background: url(/music/Yuston_XIII/Bannière.png);
+}
+
+.son {
+  width: 120px;
+  height: 120px;
+  border-radius: 10px;
+  position: absolute;
+  top: -60px;
+  left: calc(50% - 60px);
+  border: #010101 4px solid;
+}
+
+.link-son {
+  display: flex;
+  gap: 15px;
+  padding: 20px;
+  justify-content: space-between;
+}
+
+.link-son a {
+  text-decoration: none;
+  width: 20px;
+  height: 20px;
+}
+
+.link-son a img {
+  width: 100%;
+  height: 100%;
+}
+
+.music-infos {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  gap: 2px;
+}
+
+.music-infos h4 {
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.music-infos p {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.pist-music {
+  display: flex;
+  gap: 10px;
+  padding: 0 20px;
+}
+
+.advanced-time {
+  font-size: 13px;
+  font-weight: 500;
+  color: #B3B3B3;
+}
+
+.full-time {
+  font-size: 13px;
+  font-weight: 500;
+  color: #FFFFFF;
+}
+
+.suivi-music {
+  width: 100%;
+}
+
+.controls-music {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  gap: 5px;
+}
+
+.controls-music img {
+  width: 20px;
+  height: 20px;
+}
+
+.the-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 7px;
+}
+
+.mini-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  border-radius: 7px;
+}
+
+.mini-button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.pist-volume {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 0 20px;
+}
+
+.pist-volume img {
+  width: 20px;
+  height: 20px;
+}
