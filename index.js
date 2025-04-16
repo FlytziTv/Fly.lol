@@ -19,16 +19,16 @@ const songs = [
   {
     title: "Perte de temps",
     artist: "So La Lune",
-    src: "/music/So_La_Lune/Perte de temps.mp3",
-    avatar: "/music/So_La_Lune/Pp.png",
-    banner: "/music/So_La_Lune/Bannière.png",
+    src: "music/So_La_Lune/Perte de temps.mp3",
+    avatar: "music/So_La_Lune/Pp.png",
+    banner: "music/So_La_Lune/Bannière.png",
   },
   {
     title: "Lâme du phoenix",
     artist: "Yuston XIII",
-    src: "/music/Yuston_XIII/Lâme du phoenix.mp3",
-    avatar: "/music/Yuston_XIII/Pp.png",
-    banner: "/music/Yuston_XIII/Bannière.png",
+    src: "music/Yuston_XIII/Lâme du phoenix.mp3",
+    avatar: "music/Yuston_XIII/Pp.png",
+    banner: "music/Yuston_XIII/Bannière.png",
   },
 ];
 
@@ -48,10 +48,10 @@ function loadSong(index) {
 function togglePlayPause() {
   if (audioPlayer.paused) {
     audioPlayer.play();
-    playIcon.src = "/img/her/pause.svg";
+    playIcon.src = "img/her/pause.svg";
   } else {
     audioPlayer.pause();
-    playIcon.src = "/img/her/play.svg";
+    playIcon.src = "img/her/play.svg";
   }
 }
 

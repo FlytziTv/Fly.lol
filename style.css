@@ -7,7 +7,7 @@
 }
 
 body {
-  background: url(/img/background.png);
+  background: url(img/background.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -118,11 +118,11 @@ body {
 }
 
 .profile-banner {
-  background-image: url('/img/bannière/Flytzi-Bannière.png');
+  background-image: url('img/bannière/Flytzi-Bannière.png');
 }
 
 .music-banner {
-  background-image: url('/music/So_La_Lune/Bannière.png');
+  background-image: url('music/So_La_Lune/Bannière.png');
 }
 
 .profile-info,
@@ -343,7 +343,7 @@ body {
 /* MUSIC CARD */
 
 .music {
-  background: url(/music/Yuston_XIII/Bannière.png);
+  background: url(music/Yuston_XIII/Bannière.png);
 }
 
 .son {
