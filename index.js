@@ -83,7 +83,7 @@ function setVolume() {
 // Mute/Demute
 function toggleMute() {
   audioPlayer.muted = !audioPlayer.muted;
-  muteBtn.src = audioPlayer.muted ? "/img/her/volume-mute.svg" : "/img/her/volume-full.svg";
+  muteBtn.src = audioPlayer.muted ? "/img/her/volume-mute.svg" : "/img/her/no-volume.svg";
 }
 
 // Changer de chanson

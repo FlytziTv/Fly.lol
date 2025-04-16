@@ -8,36 +8,128 @@
 
 body {
   background: url(/img/background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   color: white;
   font-family: "Inter", sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  margin: 0;
+  overflow: hidden;
+  animation: fadeIn 0.5s ease-in;
 }
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes cardFadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.unavailable-message {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: black;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999; /* pour être au-dessus du reste */
+}
+
+
+@media (max-width: 768px) {
+  .all-card {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .profile-card,
+  .music-card {
+    width: 90%;
+  }
+}
+
+@media (max-width: 1000px) {
+  body > *:not(.unavailable-message) {
+    display: none !important;
+  }
+
+  .unavailable-message {
+    display: flex !important;
+  }
+}
+
 
 .all-card {
   display: flex;
   gap: 20px;
 }
 
-.profile-card {
+.all-card > div {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: cardFadeIn 0.6s ease forwards;
+  transition: transform 0.3s ease;
+}
+
+.all-card > div:nth-child(1) { animation-delay: 0.2s; }
+.all-card > div:nth-child(2) { animation-delay: 0.4s; }
+
+.all-card > div:hover {
+  transform: scale(1.02);
+}
+
+.profile-card,
+.music-card {
   width: 608px;
   padding: 4px;
   border-radius: 14px;
   overflow: hidden;
   background: #010101;
+  backdrop-filter: blur(10px);
+  border: 1px solid #010101;
 }
-.profile-banner {
+
+.music-card {
+  width: 308px;
+}
+
+.profile-banner,
+.music-banner {
   width: 100%;
   height: 200px;
   border-radius: 10px 10px 0 0;
-  background: url('/img/bannière/Flytzi-Bannière.png') center/cover;
+  background-size: cover;
+  background-position: center;
 }
-.profile-info {
+
+.profile-banner {
+  background-image: url('/img/bannière/Flytzi-Bannière.png');
+}
+
+.music-banner {
+  background-image: url('/music/So_La_Lune/Bannière.png');
+}
+
+.profile-info,
+.music-info {
   position: relative;
 }
+
 .avatar {
   width: 120px;
   height: 120px;
@@ -59,11 +151,13 @@ body {
 .pseudo {
   display: flex;
   align-items: center;
-  gap: 4px;
+  gap: 8px;
 }
 
 .pseudo h2 {
   font-size: 24px;
+  line-height: 1.3;
+  letter-spacing: 0.5px;
 }
 
 .icons-user {
@@ -72,23 +166,61 @@ body {
   background: rgba(217, 217, 217, 0.1);
   padding: 4px;
   gap: 4px;
-  /* border-radius: 50%; */
   border-radius: 30px;
 }
 
-.icons-user img {
-  width: 16px;
+.icon-tooltip {
+  position: relative;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 20px;
 }
+
+.icon-tooltip img {
+  width: 20px;
+  cursor: pointer;
+}
+
+/* Tooltip style */
+.tooltip-text {
+  visibility: hidden;
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 5px 10px;
+  border-radius: 8px;
+  position: absolute;
+  bottom: 110%; /* au-dessus de l'icône */
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  font-size: 12px;
+  font-weight: 500;
+  opacity: 0;
+  transition: opacity 0.3s;
+  z-index: 1;
+}
+
+.icon-tooltip:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
 
 .description {
   color: #aaa;
 }
+
 .badges {
   margin-left: 130px;
 }
+
 .badge {
   margin-right: 5px;
 }
+
 .stats {
   display: flex;
   justify-content: space-between;
@@ -96,6 +228,7 @@ body {
   height: 100px;
   gap: 10px;
 }
+
 .box {
   background: #111;
   padding: 10px;
@@ -135,7 +268,7 @@ body {
   text-decoration: none;
   font-weight: 500;
   padding: 1.5px 6px;
-  background-color: green;
+  background-color: #28a745;
   border-radius: 5px;
 }
 
@@ -207,25 +340,7 @@ body {
   font-weight: 500;
 }
 
-
-
-
-.music-card {
-  width: 308px;
-  padding: 4px;
-  border-radius: 14px;
-  overflow: hidden;
-  background: #010101;
-}
-.music-banner {
-  width: 100%;
-  height: 200px;
-  border-radius: 10px 10px 0 0;
-  background: url('/music/So_La_Lune/Bannière.png') center/cover;
-}
-.music-info {
-  position: relative;
-}
+/* MUSIC CARD */
 
 .music {
   background: url(/music/Yuston_XIII/Bannière.png);
@@ -345,3 +460,5 @@ body {
   width: 20px;
   height: 20px;
 }
+
+
